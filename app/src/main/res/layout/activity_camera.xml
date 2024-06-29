@@ -1,0 +1,31 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+android:background="@color/white"
+
+    tools:context=".CameraActivity">
+
+    <androidx.camera.view.PreviewView
+        android:id="@+id/cameraPreview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/btnCapture" />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnCapture"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="16dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/btn_bg"
+        android:fontFamily="@font/regular"
+        android:letterSpacing="0.02"
+        android:text="Capture"
+        android:textAllCaps="false"
+        android:textColor="@color/darkappColor"
+        android:textSize="20dp" />
+</RelativeLayout>
