@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -16,6 +17,8 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
+
+import com.fxn.stash.Stash;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -39,6 +42,11 @@ public class MainActivity extends AppCompatActivity {
         etMobile = findViewById(R.id.etMobile);
         etEmail = findViewById(R.id.etEmail);
         Button btnNext = findViewById(R.id.btnNext);
+        String email = Stash.getString("email");
+        String phone = Stash.getString("phone");
+        Log.d("dataa", email+"   "+phone);
+        etMobile.setText(phone);
+        etEmail.setText(email);
         btnNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -96,8 +104,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
-        etMobile.setText("");
-        etEmail.setText("");
+
     }
 
     public static void checkApp(Activity activity) {

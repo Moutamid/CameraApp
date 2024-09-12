@@ -51,8 +51,7 @@ public class PreviewActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 deletePhoto();
-                startActivity(new Intent(PreviewActivity.this, MainActivity.class));
-                finishAffinity();
+               onBackPressed();
             }
         });
     }

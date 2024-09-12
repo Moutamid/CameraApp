@@ -83,8 +83,7 @@ public class NetworkTask extends AsyncTask<String, Void, Boolean> {
     protected void onPostExecute(Boolean result) {
         if (result) {
             // Email sent successfully, show success toast
-            Toast.makeText(mContext, "Email sent successfully!", Toast.LENGTH_SHORT).show();
-            mContext.startActivity(new Intent(mContext, MainActivity.class));
+            mContext.startActivity(new Intent(mContext, SendCompleteActivity.class));
             mContext.finishAffinity();
         } else {
             // Error sending email, show error toast

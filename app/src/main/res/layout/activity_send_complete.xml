@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".SendCompleteActivity">
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="154dp"
+        android:layout_height="154dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:src="@drawable/success" />
+
+    <TextView
+        android:id="@+id/email"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/logo"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="30dp"
+        android:fontFamily="@font/regular"
+        android:gravity="center"
+        android:text="ytuyu"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnCapture"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+
+        android:layout_below="@+id/email"
+        android:layout_margin="22dp"
+        android:background="@drawable/btn_bg"
+        android:fontFamily="@font/regular"
+        android:letterSpacing="0.02"
+        android:text="Go to Homepage"
+        android:onClick="home"
+        android:textAllCaps="false"
+        android:textColor="@color/darkappColor"
+        android:textSize="20dp" />
+</RelativeLayout>
